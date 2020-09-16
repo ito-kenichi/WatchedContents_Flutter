@@ -1,4 +1,0 @@
-#Thu Sep 17 08:17:58 JST 2020
-base.0=/Users/itoukenichi/project_dir/flutter/check_to_travel_flutter/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
