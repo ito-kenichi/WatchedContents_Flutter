@@ -1,6 +1,6 @@
-# flutterapp
+# check_to_travel_flutter
 
-For Migration to Github Flutter application.
+A new Flutter project.
 
 ## Getting Started
 
