@@ -1,6 +1,6 @@
-# check_to_travel_flutter
+# watchedcontents
 
-A new Flutter project.
+A new Flutter application.
 
 ## Getting Started
 
