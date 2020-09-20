@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'modal/detailDialog.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,6 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -28,12 +30,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  void _handlePressed() {
+    showDialog(
+        context: context,
+        builder: (context) => DetailDialog(text:'assets/images/image002.jpg'),
+    );
   }
 
   @override
@@ -46,21 +48,20 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            FlatButton(
+              onPressed: _handlePressed,
+              color: Colors.blue,
+              child: Text(
+                '更新',
+                style: TextStyle(
+                    color:Colors.white,
+                    fontSize: 20.0
+                ),
+              ),
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
